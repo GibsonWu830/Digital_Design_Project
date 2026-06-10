@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : MDC
+Version: O-2018.06-SP1
+Date   : Tue Jun  9 01:42:43 2026
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db)
+
+Number of ports:                          235
+Number of nets:                         40869
+Number of cells:                        34029
+Number of combinational cells:          33425
+Number of sequential cells:               604
+Number of macros/black boxes:               0
+Number of buf/inv:                       2533
+Number of references:                     164
+
+Combinational area:             241447.149292
+Buf/Inv area:                     5517.792179
+Noncombinational area:            9761.976037
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                251209.125329
+Total area:                 undefined
+1
