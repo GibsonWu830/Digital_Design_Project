@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : area
+Design : CONV_TOP
+Version: O-2018.06-SP1
+Date   : Mon Jun 15 15:39:44 2026
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db)
+    DUAL_64X8X1BM1_WC (File: /home/ICer/ic_prjs/Convolution_CDC/MEM/DUAL_64X8X1BM1_WC.db)
+
+Number of ports:                          107
+Number of nets:                          1749
+Number of cells:                         1634
+Number of combinational cells:           1130
+Number of sequential cells:               487
+Number of macros/black boxes:               1
+Number of buf/inv:                        135
+Number of references:                      54
+
+Combinational area:               5196.038541
+Buf/Inv area:                      299.174410
+Noncombinational area:            6748.358305
+Macro/Black Box area:            54498.683594
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 66443.080439
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  -------------------  -------------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes       Design
+--------------------------------  ----------  -------  ---------  ---------  ----------  ---------
+CONV_TOP                          66443.0804    100.0  5196.0385  6251.6159  54498.6836  CONV_TOP
+u_FIFO_syn/M0/genblk1[0].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[1].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[2].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[3].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[4].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[5].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M0/genblk1[6].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[0].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[1].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[2].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[3].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[4].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[5].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_FIFO_syn/M1/genblk1[6].u_NDFF_syn
+                                     31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_Handshake_syn/U_NDFF_ack           31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+u_Handshake_syn/U_NDFF_req           31.0464      0.0     0.0000    31.0464      0.0000  NDFF_syn
+--------------------------------  ----------  -------  ---------  ---------  ----------  ---------
+Total                                                  5196.0385  6748.3583  54498.6836
+
+1

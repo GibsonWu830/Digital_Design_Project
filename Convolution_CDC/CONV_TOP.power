@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : CONV_TOP
+Version: O-2018.06-SP1
+Date   : Mon Jun 15 15:39:44 2026
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/ic_libs/TSMC.90/aci/sc-x/synopsys/slow.db)
+    DUAL_64X8X1BM1_WC (File: /home/ICer/ic_prjs/Convolution_CDC/MEM/DUAL_64X8X1BM1_WC.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 318.1927 uW   (99%)
+  Net Switching Power  =   3.4261 uW    (1%)
+                         ---------
+Total Dynamic Power    = 321.6187 uW  (100%)
+
+Cell Leakage Power     =  30.8110 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000        3.3876e-05        2.3101e+06        2.3440e-03  (   0.67%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.3163        2.2658e-04        1.6258e+07            0.3328  (  94.42%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.9202e-03        3.1656e-03        1.2243e+07        1.7329e-02  (   4.92%)
+--------------------------------------------------------------------------------------------------
+Total              0.3182 mW     3.4261e-03 mW     3.0811e+07 pW         0.3524 mW
+1

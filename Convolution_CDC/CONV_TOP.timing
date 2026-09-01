@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CONV_TOP
+Version: O-2018.06-SP1
+Date   : Mon Jun 15 15:39:44 2026
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: u_FIFO_syn/r_binary_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: u_FIFO_syn/u_dual_sram
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_FIFO_syn/r_binary_reg_reg[0]/CK (DFFRXL)              0.00       0.00 r
+  u_FIFO_syn/r_binary_reg_reg[0]/Q (DFFRXL)               0.34       0.34 f
+  u_FIFO_syn/u_dual_sram/B0 (DUAL_64X8X1BM1)              0.00       0.34 f
+  data arrival time                                                  0.34
+
+  clock clk1 (rise edge)                                 47.10      47.10
+  clock network delay (ideal)                             0.00      47.10
+  clock uncertainty                                      -0.10      47.00
+  u_FIFO_syn/u_dual_sram/CKB (DUAL_64X8X1BM1)             0.00      47.00 r
+  library setup time                                     -1.13      45.87
+  data required time                                                45.87
+  --------------------------------------------------------------------------
+  data required time                                                45.87
+  data arrival time                                                 -0.34
+  --------------------------------------------------------------------------
+  slack (MET)                                                       45.53
+
+
+  Startpoint: u_FIFO_syn/w_binary_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_FIFO_syn/u_dual_sram
+            (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_FIFO_syn/w_binary_reg_reg[0]/CK (DFFRQXL)             0.00       0.00 r
+  u_FIFO_syn/w_binary_reg_reg[0]/Q (DFFRQXL)              0.36       0.36 f
+  u_FIFO_syn/u_dual_sram/A0 (DUAL_64X8X1BM1)              0.00       0.36 f
+  data arrival time                                                  0.36
+
+  clock clk2 (rise edge)                                 10.10      10.10
+  clock network delay (ideal)                             0.00      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_FIFO_syn/u_dual_sram/CKA (DUAL_64X8X1BM1)             0.00      10.00 r
+  library setup time                                     -1.13       8.87
+  data required time                                                 8.87
+  --------------------------------------------------------------------------
+  data required time                                                 8.87
+  data arrival time                                                 -0.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        8.50
+
+
+1

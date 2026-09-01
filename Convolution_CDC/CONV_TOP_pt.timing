@@ -1,0 +1,58 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : CONV_TOP
+Version: O-2018.06-SP1
+Date   : Mon Jun 15 15:40:13 2026
+****************************************
+
+
+  Startpoint: u_Conv_cnt_row_reg_0_
+               (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_FIFO_syn_u_dual_sram
+               (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Conv_cnt_row_reg_0_/CK (DFFRQXL)                      0.00       0.00 r
+  u_Conv_cnt_row_reg_0_/Q (DFFRQXL)                       0.30 *     0.30 r
+  U1576/Y (INVXL)                                         0.10 *     0.40 f
+  U1589/Y (NOR3X1)                                        0.47 *     0.87 r
+  U1590/Y (OAI21BXL)                                      0.29 *     1.16 r
+  U1676/Y (AOI22XL)                                       0.18 *     1.34 f
+  U1677/Y (NAND3XL)                                       0.09 *     1.43 r
+  U1678/Y (AOI22XL)                                       0.10 *     1.53 f
+  U1688/Y (NAND3XL)                                       0.10 *     1.63 r
+  U2082/Y (AND2XL)                                        0.12 *     1.75 r
+  DP_OP_534J1_122_5388_U20/CO (CMPR42X1)                  0.44 *     2.19 f
+  DP_OP_534J1_122_5388_U14/S (CMPR42X1)                   0.45 *     2.64 f
+  intadd_0_U3/CO (ADDFXL)                                 0.26 *     2.90 f
+  intadd_0_U2/CO (ADDFXL)                                 0.20 *     3.10 f
+  U2043/Y (AOI222XL)                                      0.29 *     3.39 r
+  U2048/Y (NOR2XL)                                        0.07 *     3.46 f
+  U2049/Y (AOI211XL)                                      0.28 *     3.74 r
+  u_FIFO_syn_u_dual_sram/DIA6 (DUAL_64X8X1BM1)            0.00 *     3.74 r
+  data arrival time                                                  3.74
+
+  clock clk2 (rise edge)                                 10.10      10.10
+  clock network delay (ideal)                             0.00      10.10
+  clock reconvergence pessimism                           0.00      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_FIFO_syn_u_dual_sram/CKA (DUAL_64X8X1BM1)                       10.00 r
+  library setup time                                     -0.57 *     9.43
+  data required time                                                 9.43
+  ------------------------------------------------------------------------------
+  data required time                                                 9.43
+  data arrival time                                                 -3.74
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        5.69
+
+
+1
