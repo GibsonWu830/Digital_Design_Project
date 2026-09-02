@@ -73,7 +73,11 @@ module ISP(
     output reg     rready_s_inf
     
 );
+reg mode;
+reg [1:0]ratio_mode;
+reg [3:0]pic_no;
 
+reg [31:0]pic_addr;
 
 always@(posedge clk or negedge rst_n)begin
    if(!rst_n)begin
@@ -123,22 +127,22 @@ end
 always@(*)begin
     if(in_mode)begin
         case(in_pic_no)     //auto exposure
-        0:  pic_addr = 32'h10000;
-        1:  pic_addr = 32'h10C00;
-        2:  pic_addr = 32'h11800;
-        3:  pic_addr = 32'h12400;
-        4:  pic_addr = 32'h13000;
-        5:  pic_addr = 32'h13C00;
-        6:  pic_addr = 32'h14800;
-        7:  pic_addr = 32'h15400;
-        8:  pic_addr = 32'h16000;
-        9:  pic_addr = 32'h16C00;
-        10: pic_addr = 32'h17800;
-        11: pic_addr = 32'h18400;
-        12: pic_addr = 32'h19000;
-        13: pic_addr = 32'h19C00;
-        14: pic_addr = 32'h1A800;
-        15: pic_addr = 32'h1B400;
+        0:  pic_addr = 32'h10000;   //addr 10000    + 0 * 3072(byte)
+        1:  pic_addr = 32'h10C00;   //addr 10000    + 1 * 3072(byte)
+        2:  pic_addr = 32'h11800;   //addr 10000    + 2 * 3072(byte)
+        3:  pic_addr = 32'h12400;   //addr 10000    + 3 * 3072(byte)
+        4:  pic_addr = 32'h13000;   //addr 10000    + 4 * 3072(byte)
+        5:  pic_addr = 32'h13C00;   //addr 10000    + 5 * 3072(byte)
+        6:  pic_addr = 32'h14800;   //addr 10000    + 6 * 3072(byte)
+        7:  pic_addr = 32'h15400;   //addr 10000    + 7 * 3072(byte)
+        8:  pic_addr = 32'h16000;   //addr 10000    + 8 * 3072(byte)
+        9:  pic_addr = 32'h16C00;   //addr 10000    + 9 * 3072(byte)
+        10: pic_addr = 32'h17800;   //addr 10000    + 10 * 3072(byte)
+        11: pic_addr = 32'h18400;   //addr 10000    + 11 * 3072(byte)
+        12: pic_addr = 32'h19000;   //addr 10000    + 12 * 3072(byte)
+        13: pic_addr = 32'h19C00;   //addr 10000    + 13 * 3072(byte)
+        14: pic_addr = 32'h1A800;   //addr 10000    + 14 * 3072(byte)
+        15: pic_addr = 32'h1B400;   //addr 10000    + 15 * 3072(byte)
         default: pic_addr = 0;
         endcase
     end
