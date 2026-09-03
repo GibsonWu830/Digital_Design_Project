@@ -173,7 +173,7 @@ always@(*)begin
         exposure[119:112] = expose_fifo[375:368] >> 1;
         exposure[127:120] = expose_fifo[383:376] >> 1;
     end
-    2:
+    2: 
         exposure = expose_fifo[383:256];
     3:
     begin
